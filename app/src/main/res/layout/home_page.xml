@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBECF0"
+    android:filterTouchesWhenObscured="true"
+    android:fitsSystemWindows="true">
+
+    <ImageButton
+        android:id="@+id/button_goo_maps"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="113dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_g_maps"
+        android:contentDescription="TODO" />
+
+    <ImageButton
+        android:id="@+id/Button_map_muskot"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="113dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="48dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/peta" />
+
+    <ImageButton
+        android:id="@+id/Button_ticket"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="113dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="48dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
+        app:srcCompat="@drawable/logo_ticket" />
+
+    <ImageButton
+        android:id="@+id/Button_about"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="113dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="48dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
+        app:srcCompat="@drawable/about_us_logo"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/text_goo_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:text="Google Maps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_goo_maps" />
+
+    <TextView
+        android:id="@+id/text_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:text="Map Museum"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_map_muskot" />
+
+    <TextView
+        android:id="@+id/text_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="8dp"
+        android:text="Ticket"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_ticket"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="76dp"
+        android:text="About Us"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Button_about"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/image_home"
+        android:layout_width="413dp"
+        android:layout_height="283dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dsc_7335"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="156dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/almendra_sc"
+        android:text="Home Page"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#F3EDEE"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
