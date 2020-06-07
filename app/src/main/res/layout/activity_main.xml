@@ -41,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="450dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/dsc_7335"
+        android:src="@drawable/welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

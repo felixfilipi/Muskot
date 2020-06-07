@@ -1,34 +1,118 @@
 package com.muse.muskot
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.github.chrisbanes.photoview.PhotoView
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import kotlinx.android.synthetic.main.activity_main4.*
+
 import java.util.*
 import kotlin.collections.ArrayList
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main4.*
-import android.widget.EditText
-import kotlinx.android.synthetic.main.activity_main4.*
+
 
 class Main4Activity : AppCompatActivity() {
 
+    val arrayList = ArrayList<Model>()
+    val displayList = ArrayList<Model>()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main4)
 
-        val arrayList = ArrayList<Model>()
 
-        arrayList.add(Model("Google Maps", "This is Google Maps description", R.drawable.felixf))
-        arrayList.add(Model("Business", "This is newfeed description", R.drawable.naskleng))
+        val photoView =  findViewById(R.id.photo_view) as PhotoView
+        photoView.setImageResource(R.drawable.peta)
 
-        val myAdapter = MyAdapter (arrayList,this)
+
+        arrayList.add(Model("Hall", "This is Hall description", R.drawable.hall))
+        arrayList.add(Model("Area Garbarata", "This is Area Garbarata description", R.drawable.area_garbarata))
+        arrayList.add(Model("Runway 27 Airport", "This is Runway 27 Airport description", R.drawable.runway27airport))
+        arrayList.add(Model("Pecinan Zone", "This is Pecinan Zone description", R.drawable.pecinan_zone))
+        arrayList.add(Model("Batavia Zone", "This is Batavia Zone description", R.drawable.batavia_zone))
+        arrayList.add(Model("America Zone", "This is America Zone description", R.drawable.america_zone))
+        arrayList.add(Model("Europe Zone", "This is Europe Zone description", R.drawable.europe_zone))
+        arrayList.add(Model("Buckingham Palace", "This is Buckingham Palace description", R.drawable.buckingham))
+        arrayList.add(Model("Las Vegas", "This is Las Vegas description", R.drawable.las_vegas))
+        arrayList.add(Model("Hollywood", "This is Hollywood description", R.drawable.hollywood))
+        arrayList.add(Model("Pasar Apung", "This is Pasar Apung description", R.drawable.pasar_apung))
+
+        displayList.addAll(arrayList)
+        val myAdapter = MyAdapter (displayList,this)
+        ViewCompat.setNestedScrollingEnabled(recyclerView, false);
+        recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = myAdapter
+
+
+        }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.menu, menu)
+        val menuItem = menu!!.findItem(R.id.search)
+
+        if (menuItem != null){
+
+            val searchView = menuItem.actionView as SearchView
+
+            searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+
+                    if(newText!!.isNotEmpty()){
+
+                        displayList.clear()
+                        val search = newText.toLowerCase(Locale.getDefault())
+                        arrayList.forEach{
+
+                            if(it.title.toLowerCase(Locale.getDefault()). contains(search)){
+                                displayList.add(it)
+                            }
+                        }
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+
+                    else{
+
+                        displayList.clear()
+                        displayList.addAll(arrayList)
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+                   return true
+                }
+
+            })
+        }
+        return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
 
+    private fun bitmapDescriptorFromVector(context: Context, vectorResId: Int): BitmapDescriptor? {
+
+        return ContextCompat.getDrawable(context, vectorResId)?.run {
+            setBounds(0, 0, intrinsicWidth, intrinsicHeight)
+            val bitmap = Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888)
+            draw(Canvas(bitmap))
+            BitmapDescriptorFactory.fromBitmap(bitmap)
+        }
+    }
 }
 
 

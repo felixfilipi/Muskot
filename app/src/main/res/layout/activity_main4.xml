@@ -1,24 +1,44 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/apk/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal">
+    xmlns:ctc="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerView">
+        android:id="@+id/recyclerView"
+        android:layout_width="411dp"
+        android:layout_height="380dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="-3dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-2dp"
+        android:clickable="false"
+        android:overScrollMode="never">
+
     </androidx.recyclerview.widget.RecyclerView>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200sp"
-        android:layout_height="150sp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/felixf" />
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-4dp"
+        app:srcCompat="@drawable/peta"
+        ctc:map="photo_view"
+        />
 
-</LinearLayout>
+
+
+
+</RelativeLayout>
