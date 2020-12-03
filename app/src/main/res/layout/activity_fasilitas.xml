@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".ExtraActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="138dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="110dp"
+                android:fontFamily="sans-serif-black"
+
+                android:gravity="center_horizontal"
+                android:text="Fasilitas"
+                android:textColor="#151515"
+                android:textColorHighlight="#8E3131"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageView6"
+                android:layout_width="311dp"
+                android:layout_height="173dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+
+                app:srcCompat="@drawable/fasilitas1" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="451dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Fasilitas Museum Angkut
+Shuttel Car : Untuk mengelilingi semua wahana yang ada, disini sudah disediakan alat transportasi berupa shuttle car.
+Lift : Selain alat transportasi, juga ada fasilitas lift untuk memudahkan penjelajahan masing-masing wahana.
+Food Court : Anda Lapar dan lelah? beristirahat dan menikmati sajian lezat kuliner Jawa Timuran adalah ide yang sempurna.
+Charging Station : Oleh karena beberapa keadaan, terkadang kita lupa mengisi ulang baterai handphone. Fasilitas ini disediakan untuk mengantisipasi hal itu.
+ATM Center : Untuk pengunjung yang kehabisan uang tunai, bisa langsung menuju ATM Center yang ada.
+Smoking Area : Seperti namanya, ini adalah sebuah area yang khusus disediakan bagi pengunjung yang perokok.
+Pusat Informasi : Disinilah setiap pengunjung bisa mendapatkan info atau rekomendasi wahana pilihan, selain juga bisa dimanfaatkan jika ada anggota wisata yang tersesat.
+Tempat Ibadah : Di Museum Angkut telah disediakan sebuah Mushola bagi wisatawan muslim yang ingin menunaikan ibadah sholat.
+Loker / Deposit Counter : Untuk meringankan beban bawaan, silahkan menitipkan barang Anda ditempat ini.
+Area Parkir : Area Parkir cukup luas dan nyaman. Anda bisa membawa masuk kendaraan sampai pada lokasi yang disediakan." />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

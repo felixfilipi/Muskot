@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".garbarta_activity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="138dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginLeft="100dp"
+                android:gravity="center_horizontal"
+                android:text="AREA GARBARATA"
+                android:textColor="#151515"
+                android:textColorHighlight="#8E3131"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="351dp"
+                android:layout_height="249dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/area_garbarata" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="903dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="Naik ke lantai dua, kamu akan disuguhi zona yang lebih edukatif. Area Garbarata memamerkan alat – alat angkut yang memiliki nilai sejarah dari Indonesia dan luar negeri. Zona ini cocok sekali untuk dikunjungi bersama anak-anak. Di sini, anak-anak akan mendapatkan informasi mengenai sejarah perkembangan transportasi dengan cara yang menyenangkan. Alat transportasi tradisional yang ada di area ini berupa becak, sepeda, ataupun karapan sapi. Sementara itu, angkutan modern bisa dijumpai dalam bentuk kendaraan bermotor, kereta, dan bahkan mobil listrik. Menariknya, bangkai mobil listrik yang dikembangkan Dahlan Iskan, yakni Tucuxi berada di sini, lho! Tidak ketinggalan, ada pula bioskop yang menyediakan informasi tentang sejarah transportasi di area ini.Salah satu kendaraan yang iconic di lokasi ini adalah mobil Chrysler Windsor Deluxe yang pernah dipakai oleh Presiden Soekarno.
+Isi :
+Karapan sapi
+Becak
+Kereta Uap dan Kereta Api
+Kapal dan Perahu
+Mobil dan Energi
+Replika Kendaraan
+Bioskop Sejarah Alat Angkut
+Future Transportation"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

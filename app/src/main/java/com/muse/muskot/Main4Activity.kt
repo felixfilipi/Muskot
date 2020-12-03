@@ -1,21 +1,16 @@
 package com.muse.muskot
 
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.Canvas
+
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.EditText
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.chrisbanes.photoview.PhotoView
-import com.google.android.gms.maps.model.BitmapDescriptor
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import kotlinx.android.synthetic.main.activity_main4.*
-
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -32,7 +27,7 @@ class Main4Activity : AppCompatActivity() {
 
 
         val photoView =  findViewById(R.id.photo_view) as PhotoView
-        photoView.setImageResource(R.drawable.peta)
+        photoView.setImageResource(R.drawable.peta_zona)
 
 
         arrayList.add(Model("Hall", "This is Hall description", R.drawable.hall))
@@ -46,6 +41,7 @@ class Main4Activity : AppCompatActivity() {
         arrayList.add(Model("Las Vegas", "This is Las Vegas description", R.drawable.las_vegas))
         arrayList.add(Model("Hollywood", "This is Hollywood description", R.drawable.hollywood))
         arrayList.add(Model("Pasar Apung", "This is Pasar Apung description", R.drawable.pasar_apung))
+        arrayList.add(Model("Extra", "This is Extra description", R.drawable.extra))
 
         displayList.addAll(arrayList)
         val myAdapter = MyAdapter (displayList,this)
@@ -53,8 +49,6 @@ class Main4Activity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = myAdapter
-
-
         }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -65,6 +59,9 @@ class Main4Activity : AppCompatActivity() {
         if (menuItem != null){
 
             val searchView = menuItem.actionView as SearchView
+
+            val editText = searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+            editText.hint = "Search..."
 
             searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(query: String?): Boolean {
@@ -91,6 +88,7 @@ class Main4Activity : AppCompatActivity() {
                         displayList.clear()
                         displayList.addAll(arrayList)
                         recyclerView.adapter!!.notifyDataSetChanged()
+
                     }
                    return true
                 }
@@ -104,15 +102,6 @@ class Main4Activity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun bitmapDescriptorFromVector(context: Context, vectorResId: Int): BitmapDescriptor? {
-
-        return ContextCompat.getDrawable(context, vectorResId)?.run {
-            setBounds(0, 0, intrinsicWidth, intrinsicHeight)
-            val bitmap = Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888)
-            draw(Canvas(bitmap))
-            BitmapDescriptorFactory.fromBitmap(bitmap)
-        }
-    }
 }
 
 

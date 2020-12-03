@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".ExtraActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="138dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="110dp"
+                android:fontFamily="sans-serif-black"
+
+                android:gravity="center_horizontal"
+                android:text="Event"
+                android:textColor="#151515"
+                android:textColorHighlight="#8E3131"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageView6"
+                android:layout_width="311dp"
+                android:layout_height="173dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/event1" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Night Divas at Broadway
+
+Museum Angkut menyajikan sebuah pertunjukan bertajuk Night Divas at Broadway pada malam hari. Pertunjukan ini adalah sebuah pementasan yang mengkompilasikan antara tarian dan nyanyia ala Broadway. Sekelompok wanita cantik berkumpul dan menari di area Zona Ganster dan Broadway." />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageView7"
+                android:layout_width="311dp"
+                android:layout_height="173dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="89dp"
+                android:layout_marginBottom="137dp"
+                app:srcCompat="@drawable/event2" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-120dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Special Car and Costume Parade
+
+Special Car and Costume Parade adalah pertunjukan parade mobil dan kostum yang diadakan setiap pukul 16.30 sore. Para penampil akan berkumpul dan melakukan sebuah pertunjukan yang dilengkapi oleh pertunjukan dari DJ." />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageView8"
+                android:layout_width="245dp"
+                android:layout_height="192dp"
+                android:layout_marginLeft="55dp"
+                app:srcCompat="@drawable/event3" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Cars Round Up
+
+Cars Round Up adalah pertunjukan dari berbagai macam mobil yang berkeliling area museum. Para pengunjung museum bahkan diperbolehkan untuk melihat langsung interior dari mobil-mobil yang berparade." />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
