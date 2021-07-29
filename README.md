@@ -3,6 +3,15 @@ This repository created for completing assignment purpose which create an androi
 
 Server side created with Kotlin, using android studio
 
+Feature given in this apps:
+
+<li> Museum Angkut Location
+  <br><li> Museum Angkut Maps
+    <br><li> Museum Angkut Ticket
+      <br><li> Museum Angkut AR-Fun Game
+        <br><li> Museum Angkut Featured Vehicle & explanation for each
+
+
 Package used in this project:
 
 
@@ -19,7 +28,6 @@ Package used in this project:
 <li>com.google.ar.sceneform.ux:sceneform-ux:1.15.0 <br>
 <li>com.google.android.material:material:1.1.0 <br>
 
-No more description. Thank you!
 
 Licensed under MIT License
 
